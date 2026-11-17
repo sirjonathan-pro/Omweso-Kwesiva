@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#14532d">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMWESO + SPIN AND WIN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>OMWESO</h1>
+    <h2>+ SPIN AND WIN</h2>
+    <p>Play. Spin. Win Points!</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="topline">
+        <div><span class="tag">PLAYER 2</span>
+          <h2 id="p2name">Top side</h2></div>
+        <div class="turn-box">TURN <strong id="turn">PLAYER 1</strong></div>
+        <div><span class="tag">PLAYER 1</span><h2 id="p1name">Bottom side</h2></div>
+      </div>
+      <p class="hint">Tap one of your non-empty pits to make a move. 
+        This is a beginner-friendly, two-player seed-sowing version.</p>
+      <div class="board-wrap">
+        <div class="side-label">PLAYER 2 · TOP TWO ROWS</div>
+        <div class="board" aria-label="Omweso game board">
+          <div class="row" id="row2"></div>
+          <div class="row" id="row1"></div>
+          <div class="middle-label">OMWESO BOARD</div>
+          <div class="row" id="row3"></div>
+          <div class="row" id="row4"></div>
+        </div>
+        <div class="side-label">PLAYER 1 · BOTTOM TWO ROWS</div>
+      </div>
+      <div class="scores">
+        <div><span>Player 1 captured</span><strong id="score1">0</strong></div>
+        <div><span>Seeds remaining</span><strong id="remaining">64</strong></div>
+        <div><span>Player 2 captured</span><strong id="score2">0</strong></div>
+      </div>
+      <p id="status" class="status" role="status">Press START / RESTART to begin.</p>
+        <div class="mode-select">
+  <label for="gameMode">Choose opponent:</label>
+  <select id="gameMode">
+    <option value="human">Human vs Human</option>
+    <option value="computer">Human vs Computer (Easy)</option>
+  </select>
+</div>
+
+<div class="actions">
+  <button id="startBtn">START / RESTART</button>
+  <button id="helpBtn" class="secondary">HOW TO PLAY</button>
+</div>
+    </section>
+
+    <section class="panel spin-panel">
+      <h2>🎡 SPIN AND WIN</h2>
+      <p>Earn a bonus for the player whose turn it is.</p>
+      <div id="wheel" aria-label="Spin wheel">🎡</div>
+      <button id="spinBtn">SPIN NOW</button>
+      <p id="result">Bonus points will appear here.</p>
+      <p class="small">Bonus points are separate from seeds on the board.</p>
+    </section>
+
+    <section class="panel rules" id="rules">
+      <h2>How to play this version</h2>
+      <ol>
+        <li>Player 1 owns the bottom two rows; Player 2 owns the top two rows.</li>
+        <li>Tap a pit on your side that contains seeds.</li>
+        <li>Seeds are distributed one at a time around the board in order.</li>
+        <li>If your last seed lands in an occupied pit, pick up those seeds and continue sowing.</li>
+        <li>If your last seed lands in an empty pit, your turn ends.</li>
+        <li>The game ends when a player has no seeds on their side. The player with the most captured seeds wins.</li>
+        <li>Use SPIN NOW during your turn to earn bonus points.</li>
+      </ol>
+      <p class="small">This is a simplified playable seed-sowing adaptation, not a full implementation of every traditional Omweso rule.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>OMWESO + SPIN AND WIN · Two-player game</p>
+    <p>GROUP WORK FOR MWIRUSI JONATHAN AND NAMUSUBO SHAKIRA</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
